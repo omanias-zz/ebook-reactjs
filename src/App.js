@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Home from "./Home";
+import Carrito from "./Carrito";
+import ItemListContainer from "./ItemListContainer";
+import ItemDetailContainer from "./ItemDetailContainer";
+
+import Footer from "./Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CustomProvider from "./miContexto";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CustomProvider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/productos" element={<ItemListContainer />} />
+          <Route path="/categoria/:categoria" element={<ItemListContainer />} />
+          <Route path="/producto/:id" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<Carrito />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </CustomProvider>
   );
 }
 
