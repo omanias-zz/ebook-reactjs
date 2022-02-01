@@ -5,8 +5,8 @@ import { Card } from "react-bootstrap";
 const ItemDetail = ({ producto }) => {
   const { agregarAlCarrito } = useContexto();
 
-  const onAdd = (cantidad) => {
-    agregarAlCarrito(producto, cantidad);
+  const onAdd = (contador) => {
+    agregarAlCarrito(producto, contador);
   };
 
   return (
@@ -31,5 +31,3 @@ const ItemDetail = ({ producto }) => {
 };
 
 export default ItemDetail;
-
-// return <>{producto && <ItemDetail producto={producto} />}</>;

@@ -14,24 +14,21 @@ const CustomProvider = ({ children }) => {
   const [cantidad_total, setCantidadTotal] = useState(0);
   const [carrito, setCarrito] = useState([]);
 
-  // const precio_total = carrito.reduce((producto) => producto.precio, 0);
-
-  const agregarAlCarrito = (cantidad, producto) => {
-    console.log(cantidad);
+  const agregarAlCarrito = (producto, contador) => {
     const id = producto.id;
     if (isInCarrito(id)) {
       const copia_del_carrito = [...carrito];
       let match = copia_del_carrito.find((p) => p.id === producto.id);
-      match.cantidad = match.cantidad + cantidad;
+      match.contador = match.contador + contador;
       setCarrito(copia_del_carrito);
     } else {
       const producto_con_cantidad = {
         ...producto,
-        cantidad,
+        contador,
       };
       setCarrito([...carrito, producto_con_cantidad]);
     }
-    setCantidadTotal(cantidad_total + cantidad);
+    setCantidadTotal(cantidad_total + contador);
   };
 
   const borrarDelCarrito = (id, cantidad) => {
@@ -48,7 +45,7 @@ const CustomProvider = ({ children }) => {
         });
         let carritoFiltrado = carrito.filter((e) => e.id !== id);
         setCarrito(carritoFiltrado);
-        setCantidadTotal(cantidad_total - cantidad);
+        setCantidadTotal(0);
       } else {
         swal("Tu producto está a salvo!");
       }
