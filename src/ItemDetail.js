@@ -16,10 +16,12 @@ const ItemDetail = ({ producto }) => {
           <Card.Img variant="top" src={producto.imagen} />
 
           <div className="card-body">
-            <h4 className="card-title">{producto.title}</h4>
-            <h6 className="card-title">Categoria: {producto.categoria}</h6>
+            <h3 className="card-title">{producto.title}</h3>
+            <p className="card-title">
+              <h6>Descripción:</h6> {producto.description}
+            </p>
 
-            <p className="card-text">Precio: $ {producto.precio}</p>
+            <h6 className="card-text">Precio: $ {producto.precio}</h6>
             <div>
               <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
             </div>

@@ -23,7 +23,12 @@ Bootstrap,
 Firebase,
 React-bootstrap,
 React-icons,
+Sweet Alert,
 React-router-dom
+
+### VIDEO COMENTARIO
+
+https://www.loom.com/share/43ab7acd949f4c44a45e0591322f1bb0
 
 ### Para clonar el proyecto:
 
