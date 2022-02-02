@@ -25,27 +25,30 @@ const Formulario = () => {
 
   return (
     <>
-      <div className="form-group mb-4">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Nombre y apellido"
-        />
-      </div>
-      <div className="form-group mb-4">
-        <input type="text" class="form-control" placeholder="Teléfono" />
-      </div>
-      <div className="form-group mb-4">
-        <input type="text" class="form-control" placeholder="E-mail" />
-      </div>
-      <div className="col">
-        <button
-          type="button"
-          className="btn btn-success"
-          onClick={finalizarCompra}
-        >
-          FINALIZAR COMPRA
-        </button>
+      <div className="formulario">
+        <h5>Completa el siguiente formulario con tus datos</h5>
+        <div className="form-group mb-4">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Nombre y apellido"
+          />
+        </div>
+        <div className="form-group mb-4">
+          <input type="text" class="form-control" placeholder="Teléfono" />
+        </div>
+        <div className="form-group mb-4">
+          <input type="text" class="form-control" placeholder="E-mail" />
+        </div>
+        <div className="container-compra">
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={finalizarCompra}
+          >
+            FINALIZAR COMPRA
+          </button>
+        </div>
       </div>
     </>
   );

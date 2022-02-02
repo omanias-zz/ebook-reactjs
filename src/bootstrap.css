@@ -11944,7 +11944,7 @@ table,
 .container-home {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 5rem;
 }
 
 .container-footer {
@@ -11956,4 +11956,17 @@ table,
 
 li {
   list-style: none;
+}
+
+.formulario {
+  margin: 5rem;
+}
+
+.container-cart {
+  margin: 1rem;
+}
+
+.container-compra {
+  display: flex;
+  justify-content: center;
 }

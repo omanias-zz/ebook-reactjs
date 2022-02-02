@@ -14,8 +14,10 @@ const Carrito = () => {
 
   return (
     <div>
-      <div className="container">
-        <h3>Tu compra</h3>
+      <div className="container-cart">
+        <div className="container-compra">
+          <h3>Tu compra</h3>
+        </div>
         {carrito.length > 0 ? (
           <ul>
             {carrito.map((producto, indice) => {
