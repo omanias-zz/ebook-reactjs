@@ -4460,7 +4460,6 @@ fieldset:disabled .btn {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #4582ec;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
@@ -11929,6 +11928,7 @@ table,
 .cart {
   display: flex;
   margin-right: 0.5rem;
+  padding: 1rem;
 }
 
 .card-style {

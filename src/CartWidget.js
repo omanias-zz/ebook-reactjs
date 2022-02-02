@@ -8,12 +8,14 @@ const CartWidget = () => {
   const { cantidad_total } = useContexto();
   return (
     <>
-      <Link to="/carrito">
+      <div style={{ display: cantidad_total === 0 ? "none" : "block" }}>
         <div className="cart">
-          <FaCartArrowDown />
-          <p>{cantidad_total}</p>
+          <Link to="/carrito" title="Cart" className="nav-link">
+            <FaCartArrowDown />
+            <span className="counter">{cantidad_total}</span>
+          </Link>
         </div>
-      </Link>
+      </div>
     </>
   );
 };
